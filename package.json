@@ -1,0 +1,30 @@
+{
+  "name": "unifi-log-tail",
+  "version": "1.0.0",
+  "description": "Follow UniFi Video's recording.log and output events to rethinkdb.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/papertigers/unifi-log-tail.git"
+  },
+  "keywords": [
+    "UniFi",
+    "log",
+    "rethinkdb"
+  ],
+  "author": "Mike Zeller",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/papertigers/unifi-log-tail/issues"
+  },
+  "homepage": "https://github.com/papertigers/unifi-log-tail#readme",
+  "dependencies": {
+    "rethinkdb": "^2.3.3",
+    "rethinkdb-pool": "git+https://github.com/papertigers/rethinkdb-pool.git",
+    "tail": "^1.2.1",
+    "unifi-video-log-parser": "^1.0.1"
+  }
+}
