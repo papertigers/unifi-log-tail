@@ -27,7 +27,14 @@ tail.on("line", function lineEvent(line) {
     var query = r.table('events').insert(event);
 
     pool.run(query, function(err, cursor) {
-        if (err) throw err;
+        /*
+         * This is designed to be fire and forget.  If rethink is down or has
+         * not started yet we shouldn't crash the program.  Instead we will
+         * log the error.  Its up to the user to monitor log files and or
+         * provide their own health checking.
+        */
+        // TODO: wire up bunyan logger
+        if (err) console.log(err);
     });
 });
 
